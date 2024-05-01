@@ -32,8 +32,9 @@ export default function BoardDetailPage() {
   const router = useRouter();
 
   const { data } = useQuery(FETCH_BOARD, {
-    variables: { boardId: router.query.boardId },
+    variables: { boardId: router.query.boardId }, //router.query => {boardId:1}
   });
+  console.log(router);
 
   return (
     <Wrapper>
